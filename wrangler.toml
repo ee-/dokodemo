@@ -1,9 +1,12 @@
 name = "dokodemo"
-type = "webpack"
-account_id = ""
+main = "src/index.ts"
+compatibility_date = "2026-07-30"
 workers_dev = true
-webpack_config = "webpack.config.js"
 
-[env.production]
-route = ""
-zone_id = ""
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/wisp/*"]
+
+[vars]
+ALLOW_HOSTNAME = "google.com,youtube.com,youtube-nocookie.com,googlevideo.com,ytimg.com,gstatic.com,ggpht.com,googleusercontent.com,googleapis.com,doubleclick.net,googlesyndication.com,googleadservices.com"

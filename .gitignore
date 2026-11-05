@@ -1,4 +1,8 @@
-dist
-node_modules
-transpiled
-worker
+dist/
+node_modules/
+.wrangler/
+.dev.vars*
+.env*
+public/scramjet/
+public/controller/
+public/libcurl/
