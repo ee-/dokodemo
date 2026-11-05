@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dokodemo PoC</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; height: 100dvh; display: flex; flex-direction: column; font: 14px system-ui, sans-serif; }
+    form { display: flex; align-items: center; gap: .5rem; padding: .6rem; }
+    input { flex: 1; min-width: 0; padding: .5rem; }
+    button { padding: .5rem 1rem; }
+    #status { margin: 0; padding: 0 .6rem .6rem; }
+    iframe { flex: 1; width: 100%; min-height: 0; border: 0; }
+  </style>
+  <script src="/scramjet/scramjet.js"></script>
+  <script src="/controller/controller.api.js"></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <form>
+    <label for="url">URL</label>
+    <input id="url" type="url" required value="https://www.google.com/" autocomplete="off" spellcheck="false">
+    <button disabled>Go</button>
+  </form>
+  <p id="status" role="status">Starting browser proxy…</p>
+  <iframe title="Proxied website" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</body>
+</html>
